@@ -7,12 +7,12 @@ const googleIt = require('google-it');
 const fs = require('fs');
 const axios = require('axios');
 
-const token = 'Bot_token_here';
+const token = '6493412805:AAFp-pbw_g8lWMdEqKaOjsVY831Gwl8W578';
 const bot = new TelegramBot(token, { polling: true });
 const defaultLimit = 10000; // Default limit if no limit provided
 const usersFile = 'allowed_users.txt'; // File to store allowed user IDs
 const groupsFile = 'allowed_groups.txt';
-const masterId = 916264684; // Master user ID
+const masterId = 5860816318; // Master user ID
 
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
@@ -148,8 +148,8 @@ bot.onText(/\/search (.+)(?: (\d+))?/, (msg, match) => {
         results.slice(0, limit).forEach(result => {
           data += result.link + '\n';
         });
-        fs.writeFileSync('search_results.txt', data);
-        bot.sendDocument(chatId, './search_results.txt').then(() => {
+        fs.writeFileSync('search_results_@Cubiqqqqq.txt', data);
+        bot.sendDocument(chatId, './search_results_@Cubiqqqqq.txt').then(() => {
           bot.deleteMessage(chatId, loadingMsg.message_id);
         });
       }).catch(e => {
