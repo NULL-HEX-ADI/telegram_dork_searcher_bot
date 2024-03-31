@@ -7,7 +7,7 @@ const googleIt = require('google-it');
 const fs = require('fs');
 const axios = require('axios');
 
-const token = '6493412805:AAFp-pbw_g8lWMdEqKaOjsVY831Gwl8W578';
+const token = '7151489625:AAHgif0SEBrhXcwUG0x4FVrCIVsckSuVCaE';
 const bot = new TelegramBot(token, { polling: true });
 const defaultLimit = 10000; // Default limit if no limit provided
 const usersFile = 'allowed_users.txt'; // File to store allowed user IDs
